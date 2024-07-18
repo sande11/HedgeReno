@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  a {
+    text-decoration: none;
+  }
+  /* nav bar  */
+  .nav {
+    height: 60px;
+    width: 100%;
+    background-color: #4d4d4d;
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+    margin-top: -10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 20px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+/* banner */
+.banner-image{
+    width: 100%;
+    height: 400px;
+}
+.banner-content{
+  margin-top: -310px;
+  text-align: center;
+  width: 100%;
+}
+.banner-head{
+  font-size: 40px; 
+}
+.banner-words{
+  font-size: 20px;
+}
+.contact{
+  background-color: rgba(251, 167, 10, 0.994);
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.contact a{
+  color: black;
+}
+.quote{
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 10px;
+}
+.quote a{
+  color: white;
+}
+
+/* Services */
+.image{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 10px;
+}
+.image > .container-2{
+  flex-basis: 350px;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
+  
+}
+.image .container-2 img{
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  vertical-align:middle;
+  border-radius: 5px 5px 0px 0px;
+}
+/* .image::after {
+  content:" ";
+  flex-basis: 350px;
+} */
+.image> .container-2{
+  position: relative;
+  cursor: pointer;
+}
+.container{
+  margin-top: 40px;  
+}
+.title{
+  text-align: center;
+  font-size: 25px;
+  padding: 5px;
+  background-color: rgba(251, 167, 10, 0.994);
+  border-radius: 0px 0px 5px 5px;
+  margin-right: 0.5px;
+  font-weight: 700;
+  width: 100%;
+}
+/* Programs */
+.prog-title{
+  text-align: center;
+}
+.prog-title h2{
+  -webkit-text-decoration: rgba(251, 167, 10, 0.994) solid underline;
+  text-decoration: rgba(251, 167, 10, 0.994) solid underline;
+  -webkit-text-underline-position: under;
+  text-underline-position: under;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.image-gallery > div {
+  flex-basis: 350px; 
+}
+
+.image-gallery img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.image-gallery::after {
+  content: "";
+  flex-basis: 350px;
+}
+.shadow{
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
+}
+.shadow p{
+  text-align: center;
+}
+/* about */
+.about{
+  text-align: center;
+  margin: 10px 65px;
+  font-size: 20px;
+}
+
+/* Contact us */
+.contact-us{
+  margin: 10px 50px;
+}
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #4d4d4d;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #4d4d4d; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:rgba(251, 167, 10, 0.994);
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+/* Footer */
+.footer{
+	background: #4d4d4d;
+	color: white;
+	text-align: center;
+	
+}
+.footer p{
+	color: white;
+}
+.footer h3{
+	color:  rgba(251, 167, 10, 0.994);
+}
+.socials{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.icons img{
+  object-fit: cover;
+  width: 35px;
+  height: auto;
+  vertical-align:middle;
+  border-radius: 5px 5px 0px 0px;
+}
+.copyright{
+  padding: 10px;
+}
+
+@media (min-width:780px) {
+  .banner-image{
+    height: 750px;
+  }
+  .banner-content{
+    margin-top: -550px;
+    width: 100%;
+  }
+  .banner-head{
+    font-size: 60px;
+  }
+  .banner-words{
+    font-size: 33px;
+    margin-top: -20px;
+  }
+  .container{
+    margin-top: 180px;
+  }
+  .contact-us{
+    margin: 10px 250px;
+  }
+  .footer{
+    margin-top: -150px;
+  }
+}
